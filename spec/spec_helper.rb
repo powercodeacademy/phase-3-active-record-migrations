@@ -5,8 +5,9 @@ require "sinatra/activerecord/rake"
 RSpec.configure do |config|
   # Database setup
   config.before(:suite) do
+    Rake::Task["db:drop"].invoke rescue nil
+    Rake::Task["db:create"].invoke
     Rake::Task["db:migrate"].execute
-    DatabaseCleaner.clean_with(:truncation)
   end
 
   config.before do
