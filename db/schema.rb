@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_25_135940) do
+ActiveRecord::Schema.define(version: 2026_07_20_174849) do
+
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "genre"
@@ -18,4 +19,5 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_25_135940) do
     t.string "hometown"
     t.string "favorite_flower"
   end
+
 end
