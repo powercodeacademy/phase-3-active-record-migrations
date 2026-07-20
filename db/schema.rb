@@ -10,12 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_25_135940) do
+ActiveRecord::Schema.define(version: 2026_07_20_172539) do
+
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "genre"
     t.integer "age"
     t.string "hometown"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "favorite_flower"
   end
+
 end
